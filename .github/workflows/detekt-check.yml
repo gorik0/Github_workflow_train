@@ -1,0 +1,27 @@
+name: Detekt_Actions
+
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  detekt:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Checkout JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: oracle
+          java-version: '18'
+
+      - name: Grand execute perm for gradlew
+        run: ./gradlew detekt
