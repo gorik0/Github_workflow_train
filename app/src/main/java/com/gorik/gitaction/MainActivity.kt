@@ -43,7 +43,7 @@ fun Greeting(count:Int,name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     GitActionTheme {
-        Greeting(1,"Android")
+        Greeting(1,"Droid-2000")
     }
 }
 
