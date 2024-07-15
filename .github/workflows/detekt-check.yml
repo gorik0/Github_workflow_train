@@ -24,4 +24,7 @@ jobs:
           java-version: '18'
 
       - name: Grand execute perm for gradlew
+        run: chmod +x ./gradlew
+
+      - name: BUILD run detekT
         run: ./gradlew detekt
